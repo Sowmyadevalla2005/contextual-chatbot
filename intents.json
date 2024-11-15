@@ -1,0 +1,124 @@
+{
+    "intents": [
+      {
+        "name": "Greeting Intent",
+        "trainingPhrases": [
+          "Hello",
+          "Hi",
+          "Hey, how are you?",
+          "Good morning",
+          "Hi there"
+        ],
+        "responses": [
+          "Hello! How can I help you today?",
+          "Hi! I can assist you in finding your next property. Where would you like to look?",
+          "Good day! How may I assist you in finding your dream home?"
+        ]
+      },
+      {
+        "name": "Property Search Intent",
+        "trainingPhrases": [
+          "Find houses in New York",
+          "Show me apartments in Los Angeles",
+          "I want to buy a house in San Francisco",
+          "Looking for apartments in [city]",
+          "Search properties in [location]"
+        ],
+        "parameters": [
+          {
+            "name": "Location",
+            "entity": "@sys.geo-city",
+            "required": true
+          }
+        ],
+        "responses": [
+          "I found several properties in $Location. Would you like to see more?",
+          "Here are some options for properties in $Location.",
+          "I have found houses in $Location that match your criteria. Do you want more details?"
+        ]
+      },
+      {
+        "name": "Property Type Intent",
+        "trainingPhrases": [
+          "I'm looking for a house",
+          "Find me an apartment",
+          "Show me condos",
+          "I want to buy a villa"
+        ],
+        "parameters": [
+          {
+            "name": "PropertyType",
+            "entity": "@PropertyType",
+            "required": true
+          }
+        ],
+        "responses": [
+          "I found some $PropertyType for you. Would you like to see them?",
+          "I can show you more options for $PropertyType."
+        ]
+      },
+      {
+        "name": "Price Range Intent",
+        "trainingPhrases": [
+          "Show me properties under $500,000",
+          "I want a house in the $300k-$500k range",
+          "Find me houses between $1M and $2M",
+          "What’s available in the $700k price range?"
+        ],
+        "parameters": [
+          {
+            "name": "PriceRange",
+            "entity": "@sys.number-integer",
+            "required": true
+          }
+        ],
+        "responses": [
+          "I found properties in the $PriceRange range. Would you like to see them?",
+          "Here are some houses in the $PriceRange range."
+        ]
+      },
+      {
+        "name": "Location Specific Intent",
+        "trainingPhrases": [
+          "Find houses in New York",
+          "Show me properties in Miami",
+          "I’m looking for a house in Chicago"
+        ],
+        "parameters": [
+          {
+            "name": "Location",
+            "entity": "@sys.geo-city",
+            "required": true
+          }
+        ],
+        "responses": [
+          "I found several properties in $Location. Would you like to explore them?"
+        ]
+      },
+      {
+        "name": "Property Details Intent",
+        "trainingPhrases": [
+          "Tell me more about the house in New York",
+          "Give me more details about the 3BHK house",
+          "Show me more pictures of the property"
+        ],
+        "responses": [
+          "Here are more details about the property: [Property Details].",
+          "The house has 3 bedrooms, 2 bathrooms, and is located in $Location. Do you want to schedule a visit?"
+        ]
+      },
+      {
+        "name": "Schedule Visit Intent",
+        "trainingPhrases": [
+          "Can I schedule a visit?",
+          "I want to see the property",
+          "Schedule a viewing for the house in New York"
+        ],
+        "responses": [
+          "I can help schedule your visit. When would you like to view the property?",
+          "Please provide a time for the viewing, and I’ll book it for you."
+        ]
+      }
+    ]
+  }
+  
