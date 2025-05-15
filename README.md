@@ -26,7 +26,7 @@ python -c "import nltk; nltk.download('punkt')"
 # Train and run
 python train.py && python chat.py
 
-## 🛠️ Configuration
+# 🛠️ Configuration
 intents.json Structure:
 json
 {
@@ -39,7 +39,7 @@ json
     }
   ]
 }
-## 📦 Project Structure
+# 📦 Project Structure
 real-estate-chatbot/
 ├── train.py         # Model training script
 ├── chat.py          # Interactive chat interface
@@ -47,7 +47,7 @@ real-estate-chatbot/
 ├── nlp_utils.py     # Text processing functions
 ├── intents.json     # Conversation patterns
 └── data.pth         # Trained model weights
-## 📋 Requirements
+# 📋 Requirements
 Python 3.8+
 
 PyTorch 1.12+
