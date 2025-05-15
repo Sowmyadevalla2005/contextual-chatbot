@@ -1,47 +1,27 @@
-# Contextual Chatbot using PyTorch  
+# 🏠 Real Estate Chatbot with PyTorch
 
-A simple chatbot for real estate queries, built with PyTorch and NLTK. Customize responses by editing `intents.json`.  
+A production-ready chatbot for real estate inquiries, featuring contextual understanding and easy customization through JSON configuration.
 
-## Features  
-- 🏠 **Real Estate Focus**: Handles property listings, pricing, and FAQs  
-- 🧠 **Neural Network**: 2-layer feed-forward model for contextual responses  
-- ⚙️ **Easy Customization**: Modify `intents.json` to add new queries  
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)
+![NLTK](https://img.shields.io/badge/NLTK-%2300A67E.svg?logo=nltk&logoColor=white)
 
-## Installation  
+## 🌟 Key Features
+- **Property Specialist**: Pre-trained for listings, pricing, and location queries
+- **Smart Dialogue**: 2-layer neural network maintains conversation context
+- **Zero-Code Customization**: Modify behavior via simple JSON edits
+- **Training Dashboard**: Real-time accuracy metrics during model training
+
+## 🚀 Quick Start
 ```bash
+# Clone and setup
 git clone https://github.com/yourusername/real-estate-chatbot.git
 cd real-estate-chatbot
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install torch nltk
+python -m venv venv && source venv/bin/activate  # Windows: .\venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
 python -c "import nltk; nltk.download('punkt')"
 
-## Usage
-Train the model:
-bash
-python train.py  # Generates `data.pth`
-##Chat with the bot:
-
-bash
-python chat.py
-##Customization
-Edit intents.json to add/update responses:
-
-json
-{
-  "intents": [
-    {
-      "tag": "pricing",
-      "patterns": ["What's the price?", "How much does it cost?"],
-      "responses": ["Prices start at $300k."]
-    }
-  ]
-}
-
-
-##Requirements
-Python 3.x
-
-PyTorch
-
-NLTK
+# Train and run
+python train.py && python chat.py
