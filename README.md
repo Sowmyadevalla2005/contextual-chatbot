@@ -25,3 +25,17 @@ python -c "import nltk; nltk.download('punkt')"
 
 # Train and run
 python train.py && python chat.py
+
+## 🛠️ Configuration
+intents.json Structure:
+json
+{
+  "intents": [
+    {
+      "tag": "availability",
+      "patterns": ["Any units available?", "What's in stock?"],
+      "responses": ["We have 5 properties currently available.", "Inventory updates daily."],
+      "context": ["property-inquiry"]
+    }
+  ]
+}
