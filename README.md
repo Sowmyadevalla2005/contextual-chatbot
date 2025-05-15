@@ -16,16 +16,15 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install torch nltk
 python -c "import nltk; nltk.download('punkt')"
 
-Usage
+## Usage
 Train the model:
-
 bash
 python train.py  # Generates `data.pth`
-Chat with the bot:
+##Chat with the bot:
 
 bash
 python chat.py
-Customization
+##Customization
 Edit intents.json to add/update responses:
 
 json
@@ -38,10 +37,9 @@ json
     }
   ]
 }
-Demo
-Watch Tutorial
 
-Requirements
+
+##Requirements
 Python 3.x
 
 PyTorch
