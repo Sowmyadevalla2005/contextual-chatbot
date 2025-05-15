@@ -39,3 +39,17 @@ json
     }
   ]
 }
+## 📦 Project Structure
+real-estate-chatbot/
+├── train.py         # Model training script
+├── chat.py          # Interactive chat interface
+├── model.py         # Neural network definition
+├── nlp_utils.py     # Text processing functions
+├── intents.json     # Conversation patterns
+└── data.pth         # Trained model weights
+## 📋 Requirements
+Python 3.8+
+
+PyTorch 1.12+
+
+NLTK 3.7+
